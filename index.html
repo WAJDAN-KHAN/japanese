@@ -189,52 +189,161 @@
                 <div>
                     <ul class="separate-buttons">
                         <li class="at-item">
+
                             <img src="./assets/images/headphones_sound_wave_24_filled.svg" alt="">
                         </li>
                         <li class="at-item">
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <span part="social-bar-counts upvote-count"
+                                class="binary-reactions-count count-badge">46</span>
+
+                            <svg width="20" height="20" class="like" fill="#0078d4" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg" onclick="toggleReaction(this)">
+                                <path
+                                    d="M12.48 1.7c-.8-.83-2.09-.38-2.43.6-.28.8-.64 1.77-1 2.48C8 6.9 7.38 8.1 5.67 9.63c-.23.2-.52.36-.84.49-1.13.44-2.2 1.61-1.91 3l.35 1.77a2.5 2.5 0 001.8 1.92l5.6 1.52a4.5 4.5 0 005.6-3.53l.69-3.76A3 3 0 0014 7.5h-.89l.01-.05c.08-.41.18-.97.24-1.59.07-.6.1-1.28.05-1.9a3.68 3.68 0 00-.5-1.74 4.16 4.16 0 00-.44-.52z">
+                                </path>
+                            </svg>
+
+                            <svg width="20" height="20" class="dislike" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg" style="display:none;" onclick="toggleReaction(this)">
                                 <path
                                     d="M12.48 1.7c-.8-.83-2.09-.38-2.43.6-.28.8-.64 1.77-1 2.48C8 6.9 7.38 8.1 5.67 9.63c-.23.2-.52.36-.84.49-1.13.44-2.2 1.61-1.91 3l.35 1.77a2.5 2.5 0 001.8 1.92l5.6 1.52a4.5 4.5 0 005.6-3.53l.69-3.76A3 3 0 0014 7.5h-.89l.01-.05c.08-.41.18-.97.24-1.59.07-.6.1-1.28.05-1.9a3.68 3.68 0 00-.5-1.74 4.16 4.16 0 00-.44-.52z">
                                 </path>
                             </svg>
                         </li>
+
                         <li class="at-item">
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" class="dis" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M12.48 18.3c-.8.83-2.09.38-2.43-.6-.28-.8-.64-1.77-1-2.48C8 13.1 7.38 11.9 5.67 10.37c-.23-.2-.52-.36-.84-.49-1.13-.44-2.2-1.61-1.91-3l.35-1.77a2.5 2.5 0 011.8-1.92l5.6-1.53a4.5 4.5 0 015.6 3.54l.69 3.76A3 3 0 0114 12.5h-.89l.01.05c.08.41.18.97.24 1.58.07.62.1 1.29.05 1.92a3.68 3.68 0 01-.5 1.73c-.11.16-.27.35-.44.52z">
                                 </path>
                             </svg>
                         </li>
                         <li class="at-item">
+                            <span part="social-bar-counts upvote-count"
+                                class="binary-reactions-count count-badge ">46</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M6.8 17.8a1 1 0 01-1.4-.2.98.98 0 01-.2-.59v-2.17h-.6A2.58 2.58 0 012 12.28V5.57A2.58 2.58 0 014.6 3h10.8C16.84 3 18 4.15 18 5.57v6.7a2.58 2.58 0 01-2.6 2.57h-4.59L6.8 17.8zm-.6-.8z">
                                 </path>
                             </svg>
                         </li>
-                        <li class="at-item">
+                        <li class="at-item" id="dropdown-trigger">
                             <img src="./assets/images/share_20_filled.svg" alt="">
+
+                            <div class="dropdown-share">
+                                <div class="containers-top">
+                                    <div class="shareBar">
+                                        <label>共有</label>
+                                        <button class="close" type="button" title="閉じる">
+                                            <img alt="Close" aria-hidden="true" src="./assets/images/Close.svg"
+                                                width="12" height="32"></button>
+
+                                    </div>
+                                    <div class="share header">
+                                        <div class="share header-title">
+                                            <div class="share header-attribution">テレ朝news</div><label
+                                                class="share header-abstract">6月給与に反映しないと…林長官「労働基準法に違反し得る」迫る『定額減税』罰則も</label>
+                                        </div>
+                                        <img src="./assets/images/BB1ngQdf (1).jpeg" width="72" height="72" alt="">
+                                    </div>
+                                </div>
+                                <hr class="hrr">
+                                <div class="container bottom">
+                                    <div class="qr-header"><img alt="Microsoft Start App Logo" aria-hidden="true"
+                                            src="./assets/images/MicrosoftStartApp.png" height="32" width="32"><label
+                                            class="qr-label">モバイル
+                                            アプリで読む</label><img class="qr-img" alt="qr code" aria-hidden="true"
+                                            src="./assets/images/QrIcon.svg" height="32" width="32">
+                                    </div>
+                                    <div class="share grid">
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/Link.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>リンクをコピー</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/Mail.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>メール</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/Skype.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>Skype</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/Whatsapp.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>Whatsapp</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/Facebook.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>Facebook</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/X.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>X</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/LinkedIn.svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>LinkedIn</label>
+                                        </div>
+                                        <div class="share item"><a href="#" class="" target="none"><!----><img
+                                                    class="copy" aria-hidden="true" src="./assets/images/More (1).svg"
+                                                    width="32" height="32" alt="Copy link"></a>
+                                            <label>その他</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="at-item">
+                        <li class="at-item" id="dropdown-toggle">
                             <img src="./assets/images/More.svg" alt="" style="transform: rotate(90deg);">
+                            <div class="dropdown-menus">
+                                <ul>
+                                    <li>
+                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.9 2.9a1 1 0 00-1.8 0L7.17 6.8l-4.31.63a1 1 0 00-.56 1.7l3.13 3.05-.74 4.3a1 1 0 001.45 1.05l3.43-1.8c.16-.4.4-.76.7-1.07l.1-.09a1 1 0 00-.83.05l-3.87 2.03.74-4.3a1 1 0 00-.29-.89L3 8.43l4.32-.63a1 1 0 00.75-.55L10 3.35l1.93 3.9c.15.3.43.5.75.55l4.32.63-.72.7c.48-.15 1-.17 1.49-.06a1 1 0 00-.63-1.63l-4.31-.63L10.9 2.9zm4.9 7.65l-4.82 4.83a2.2 2.2 0 00-.58 1.02l-.37 1.5a.89.89 0 001.08 1.07l1.5-.37c.38-.1.73-.3 1.01-.58l4.83-4.83a1.87 1.87 0 00-2.64-2.64z">
+                                            </path>
+                                        </svg>
+                                        パーソナライズ設定
+                                    </li>
+                                    <li>
+                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.5 13h11a.5.5 0 00.42-.78L13.1 8l2.82-4.22A.5.5 0 0015.5 3H4a.5.5 0 00-.5.5v14a.5.5 0 001 0V13zm0-1V4h10.07l-2.49 3.72a.5.5 0 000 .56L14.57 12H4.5z">
+                                            </path>
+                                        </svg>
+                                        問題を報告する
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-12 borderRright">
+            <div class="col-sm-6 col-12 pb-5 pt-3 borderRright">
                 <div>
                     <div class="newProviderBannerContainer newProviderBannerBgLight">
-                        <div class="d-flex flex-wrap gap-2 between align-items-center">
+                        <div class="d-flex flex-wrap justify-content-between   align-items-center">
                             <div class="d-flex">
                                 <img src="./assets/images/AAMccaL.png" alt="">
                                 <p class="providerNameSm">
                                     テレ朝news
                                 </p>
-                            </div>
-                            <div class="d-flex justify-content-between gap-5">
                                 <button class="black hidden">
                                     + フォローする
                                 </button>
+                            </div>
+                            <div class="d-flex justify-content-between gap-5">
+
                                 <div class="d-flex align-items-center">
                                     <div class="follow-text hidden">137.8K&nbsp;<span class="follower-text">フォロワー</span>
                                     </div>
@@ -286,7 +395,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-12 topMa">
+            <div class="col-md-4 col-12 topMa padTop hidden">
                 <div class="d-flex flex-column gap-3">
                     <div class="fluent-card">
                         <div class="titlee">
@@ -329,6 +438,70 @@
                 scrollHide.style.display = 'block';
                 scrollHidden.classList.add('hidden');
             }
+        });
+    </script>
+    <script>
+        function toggleReaction(svg) {
+            var likeSVG = svg.parentElement.querySelector('.like');
+            var dislikeSVG = svg.parentElement.querySelector('.dislike');
+            var countSpan = svg.parentElement.querySelector('.binary-reactions-count');
+
+            if (likeSVG.style.display === "none") {
+                likeSVG.style.display = "inline-block";
+                dislikeSVG.style.display = "none";
+                countSpan.textContent = parseInt(countSpan.textContent) + 1;
+            } else {
+                dislikeSVG.style.display = "inline-block";
+                likeSVG.style.display = "none";
+                countSpan.textContent = parseInt(countSpan.textContent) - 1;
+            }
+        }
+
+    </script>
+    <script>
+        const svg = document.querySelector('.at-item .dis');
+        let filled = false;
+
+        svg.addEventListener('click', function () {
+            filled = !filled;
+            if (filled) {
+                svg.querySelector('path').setAttribute('fill', '#0078d4');
+            } else {
+                svg.querySelector('path').removeAttribute('fill');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var dropdownToggle = document.getElementById("dropdown-toggle");
+            var dropdownMenu = dropdownToggle.querySelector(".dropdown-menus");
+
+            dropdownToggle.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("show-dropdown");
+            });
+
+            // Close the dropdown when clicking outside of it
+            window.addEventListener("click", function (event) {
+                if (!dropdownToggle.contains(event.target)) {
+                    dropdownMenu.classList.remove("show-dropdown");
+                }
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the trigger element
+            var trigger = document.getElementById("dropdown-trigger");
+
+            // Get the dropdown element
+            var dropdown = document.querySelector(".dropdown-share");
+
+            // Add click event listener to the trigger
+            trigger.addEventListener("click", function () {
+                // Toggle the 'open' class on the dropdown
+                dropdown.classList.toggle("open");
+            });
         });
     </script>
 </body>

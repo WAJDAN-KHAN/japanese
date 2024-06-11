@@ -168,6 +168,21 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
+}
+.count-badge {
+    position: absolute;
+    top: -10px;
+    right: -35%;
+    background: #0078d4;
+    width: max-content;
+    min-width: 10px;
+    border-radius: 16px;
+    padding: 4px 6px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
 }
 
 
@@ -331,6 +346,11 @@ body {
     min-height: 268px;
     box-shadow: none;
     background: #F7F7F7;
+   
+    margin: 60px auto ;
+}
+.padTop{
+    padding-top: 60px;
 }
 
 .titlee{ 
@@ -348,7 +368,7 @@ body {
 .title-span {
     color: rgb(3, 106, 196);
     text-decoration: none;
-  
+  font-size: 10px;
         font-weight: 600;
         margin-inline: 10px auto;
         writing-mode: horizontal-tb;
@@ -386,6 +406,177 @@ body {
 .container-custom{
     padding: 0px 80px;
 }
+
+
+.dropdown-menus {
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2.4px 7.2px, rgba(0, 0, 0, 0.22) 0px 12.8px 28.8px;
+    width: 240px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: white;
+}
+
+.dropdown-menus.show-dropdown {
+    display: block;
+}
+
+.dropdown-menus ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+.dropdown-menus ul li {
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: .3s;
+}
+
+.dropdown-menus ul li:hover {
+    background-color: #f2f2f2;
+}
+
+
+.dropdown-share{
+    border:  1px solid transparent;
+    top: -50px;
+    left: 50px;
+        position: absolute;
+        background: white;
+        overflow: hidden auto;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 21.38px, rgba(0, 0, 0, 0.19) 0px 32px 64px;
+        width: 352px;
+        max-height: calc(-216px + 100vh);
+        min-height: 120px;
+        transition: all 0.4s ease 0s;
+        z-index: 999;
+        display: none;
+}
+.dropdown-share.open {
+    display: block; /* Show the dropdown when open class is applied */
+}
+.containers-top{
+    padding: 8px 16px 16px;
+}
+
+.shareBar{
+    display: flex;
+    justify-content: space-between;
+}
+.share label{
+    font-size: 14px;
+    font-weight: 600;
+    align-self: center;
+    color: #2b2b2b;
+}
+.close {
+    content: "close";
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: none;
+    padding: 0px;
+    margin-right: -4px;
+    border-radius: 50%;
+    background: transparent;
+    transition-duration: 0.4s;
+}
+
+.share.header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4px;
+}
+
+.share.header-title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 12px;
+}
+.share.header-attribution {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(95, 95, 95);
+}
+.share.header-abstract {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.hrr {
+    margin: 0px;
+    border-width: 1px 0px 0px;
+    border-right-style: initial;
+    border-bottom-style: initial;
+    border-left-style: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    border-top-style: solid;
+    border-top-color: rgb(191, 191, 191);
+    
+}
+.container.bottom {
+    padding: 16px;
+  
+}
+.qr-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.qr-label {
+    flex: 1 1 0%;
+    margin: 0px 12px;
+    cursor: pointer;
+    text-align: start;
+}
+
+.share.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.share.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    gap: 4px;
+}
+.share.item label {
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media(min-width:1024px){
+    .fluent-card {
+        display: block;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        min-height: 268px;
+        box-shadow: none;
+        background: #F7F7F7;
+        max-width: 330px;
+        margin: 60px  auto;
+    }
+}
+
+
 @media(max-width:800px) {
     .hidden {
         display: none !important;
@@ -420,4 +611,18 @@ body {
     .between{
         justify-content: space-between;
     }
+    .fluent-card {
+        display: block;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        min-height: 268px;
+        box-shadow: none;
+        background: #F7F7F7;
+        max-width: 100%;
+        margin: auto;
+    }
+    .padTop{
+        padding-top: 0;
+    }
+    
 }

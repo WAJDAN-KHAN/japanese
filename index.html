@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head lang="ja-jp" dir="ltr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <div class="fixed" style="border-bottom: 1px solid rgba(0, 0, 0, 0.18);">
+        <section class="header-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="./assets/images/MicrosoftStartLogo_light.svg" alt="">
+                </div>
+
+                <div class="search hidden">
+                    <button class="control ">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2.75a7.25 7.25 0 015.63 11.82l4.9 4.9a.75.75 0 01-.98 1.13l-.08-.07-4.9-4.9A7.25 7.25 0 1110 2.75zm0 1.5a5.75 5.75 0 100 11.5 5.75 5.75 0 000-11.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <input type="search" id="q" name="q" autocomplete="off" maxlength="250" data-customhandled="true"
+                        class="control " title="検索語句を入力" aria-label="検索語句を入力" placeholder="Web を検索"
+                        data-t="{&quot;n&quot;:&quot;search_websearch&quot;,&quot;t&quot;:9,&quot;a&quot;:&quot;submit&quot;,&quot;b&quot;:50,&quot;c.t&quot;:30}">
+                    <button class="control ">
+
+                        <img src="./assets/images/copilot_color.svg" width="24" height="24" alt="">
+
+                    </button>
+                </div>
+                <div class="d-flex align-items-center icons">
+                    <button class="control2 hidden">
+
+                        <svg width="24" height="24" viewBox="0 0 10 16">
+                            <path
+                                d="M4 12a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H4ZM2 0a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2ZM1 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2Z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <button class="control2  hidden">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.25 2c.97 0 1.75.78 1.75 1.75v3.04c0 1.03-.57 1.97-1.48 2.44l-6.28 3.28a5 5 0 11-4.48 0L3.48 9.23A2.75 2.75 0 012 6.79V3.75C2 2.78 2.78 2 3.75 2h16.5zM12 13.48a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm3.5-9.98h-7v6.66l3.38 1.77c.08.04.16.04.24 0l3.38-1.77V3.5zM7 3.5H3.75a.25.25 0 00-.25.25v3.04c0 .47.26.9.67 1.11L7 9.38V3.5zm13.25 0H17v5.88l2.83-1.48c.41-.22.67-.64.67-1.1V3.74a.25.25 0 00-.25-.25z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <button class="control2  hidden">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2a7.5 7.5 0 017.5 7.25v4.35l1.38 3.15a1.25 1.25 0 01-1.15 1.75H15a3 3 0 01-6 .18v-.18H4.27a1.25 1.25 0 01-1.14-1.75L4.5 13.6V9.5C4.5 5.35 7.85 2 12 2zm1.5 16.5h-3a1.5 1.5 0 003 .15v-.15zM12 3.5c-3.32 0-6 2.67-6 6v4.4L4.66 17h14.7L18 13.9V9.29a5.99 5.99 0 00-6-5.78z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <button class="control2  hidden">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.01 2.25c.74 0 1.47.1 2.18.25.32.07.55.33.59.65l.17 1.53a1.38 1.38 0 001.92 1.11l1.4-.61c.3-.13.64-.06.85.17a9.8 9.8 0 012.2 3.8c.1.3 0 .63-.26.82l-1.24.92a1.38 1.38 0 000 2.22l1.24.92c.26.19.36.52.27.82a9.8 9.8 0 01-2.2 3.8.75.75 0 01-.85.17l-1.4-.62a1.38 1.38 0 00-1.93 1.12l-.17 1.52a.75.75 0 01-.58.65 9.52 9.52 0 01-4.4 0 .75.75 0 01-.57-.65l-.17-1.52a1.38 1.38 0 00-1.93-1.11l-1.4.62a.75.75 0 01-.85-.18 9.8 9.8 0 01-2.2-3.8c-.1-.3 0-.63.27-.82l1.24-.92a1.38 1.38 0 000-2.22l-1.24-.92a.75.75 0 01-.28-.82 9.8 9.8 0 012.2-3.8c.23-.23.57-.3.86-.17l1.4.62c.4.17.86.15 1.25-.08.38-.22.63-.6.68-1.04l.17-1.53a.75.75 0 01.58-.65c.72-.16 1.45-.24 2.2-.25zm0 1.5c-.45 0-.9.04-1.35.12l-.11.97a2.89 2.89 0 01-4.02 2.33l-.9-.4A8.3 8.3 0 004.28 9.1l.8.59a2.88 2.88 0 010 4.64l-.8.59a8.3 8.3 0 001.35 2.32l.9-.4a2.88 2.88 0 014.02 2.32l.1.99c.9.15 1.8.15 2.7 0l.1-.99a2.88 2.88 0 014.02-2.32l.9.4a8.3 8.3 0 001.36-2.32l-.8-.59a2.88 2.88 0 010-4.64l.8-.59a8.3 8.3 0 00-1.35-2.32l-.9.4a2.88 2.88 0 01-4.02-2.32l-.11-.98c-.45-.08-.9-.11-1.34-.12zM12 8.25a3.75 3.75 0 110 7.5 3.75 3.75 0 010-7.5zm0 1.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <button class="sign-out">
+                        サインイン
+                    </button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="search show2">
+                    <button class="control ">
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2.75a7.25 7.25 0 015.63 11.82l4.9 4.9a.75.75 0 01-.98 1.13l-.08-.07-4.9-4.9A7.25 7.25 0 1110 2.75zm0 1.5a5.75 5.75 0 100 11.5 5.75 5.75 0 000-11.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+                    <input type="search" id="q" name="q" autocomplete="off" maxlength="250" data-customhandled="true"
+                        class="control " title="検索語句を入力" aria-label="検索語句を入力" placeholder="Web を検索"
+                        data-t="{&quot;n&quot;:&quot;search_websearch&quot;,&quot;t&quot;:9,&quot;a&quot;:&quot;submit&quot;,&quot;b&quot;:50,&quot;c.t&quot;:30}">
+                    <button class="control ">
+
+                        <img src="./assets/images/copilot_color.svg" width="24" height="24" alt="">
+
+                    </button>
+                </div>
+            </div>
+            <div class="container py-4 hidden" id="scrollHide">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul class="list" part="list">
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="myfeed"
+                                href="https://www.msn.com/ja-jp/feed?ocid=binghp01"
+                                data-t='{"n":"マイ フィード","a":"click","b":1,"d":"https://www.msn.com/ja-jp/feed?ocid=binghp01","f.i":"myfeed","f.n":"マイ フィード","f.t":"category filter","c.hl":"マイ フィード"}'>
+                                トップ
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item" class="pipe">
+                            <msn-nav-item exportparts="control:nav-item-control" id="following"
+                                href="https://www.msn.com/ja-jp/feed/interest/following?ocid=binghp01"
+                                data-t='{"n":"フォロー中","a":"click","b":1,"d":"https://www.msn.com/ja-jp/feed/interest/following?ocid=binghp01","f.i":"following","f.n":"フォロー中","f.t":"category filter","c.hl":"フォロー中"}'>
+                                フォロー中
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="news"
+                                href="https://www.msn.com/ja-jp/channel/topic/ニュース/tp-Y_bd49806e-3693-4cfc-8936-62e1aa856dfb?ocid=binghp01"
+                                active
+                                data-t='{"n":"ニュース","a":"click","b":1,"d":"https://www.msn.com/ja-jp/channel/topic/ニュース/tp-Y_bd49806e-3693-4cfc-8936-62e1aa856dfb?ocid=binghp01","f.i":"news","f.n":"ニュース","f.t":"category filter","c.hl":"ニュース"}'>
+                                ニュース
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="entertainment"
+                                href="https://www.msn.com/ja-jp/channel/topic/エンタメ/tp-Y_1e91ab30-89d4-45d9-8661-65b486d3a600?ocid=binghp01"
+                                data-t='{"n":"エンタメ","a":"click","b":1,"d":"https://www.msn.com/ja-jp/channel/topic/エンタメ/tp-Y_1e91ab30-89d4-45d9-8661-65b486d3a600?ocid=binghp01","f.i":"entertainment","f.n":"エンタメ","f.t":"category filter","c.hl":"エンタメ"}'>
+                                エンタメ
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="lifestyle"
+                                href="https://www.msn.com/ja-jp/channel/topic/ライフスタイル/tp-Y_14d8e32d-d7a7-4ee3-88ad-335cf990bb83?ocid=binghp01"
+                                data-t='{"n":"ライフスタイル","a":"click","b":1,"d":"https://www.msn.com/ja-jp/channel/topic/ライフスタイル/tp-Y_14d8e32d-d7a7-4ee3-88ad-335cf990bb83?ocid=binghp01","f.i":"lifestyle","f.n":"ライフスタイル","f.t":"category filter","c.hl":"ライフスタイル"}'>
+                                ライフスタイル
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="autos"
+                                href="https://www.msn.com/ja-jp/autos?ocid=binghp01"
+                                data-t='{"n":"自動車","a":"click","b":1,"d":"https://www.msn.com/ja-jp/autos?ocid=binghp01","f.i":"autos","f.n":"自動車","f.t":"category filter","c.hl":"自動車"}'>
+                                自動車
+                            </msn-nav-item>
+                        </li>
+                        <li part="list-item">
+                            <msn-nav-item exportparts="control:nav-item-control" id="news-video"
+                                href="https://www.msn.com/ja-jp/channel/topic/ニュース映像/tp-Y_353895c2-aee6-468b-9827-adb65dde3989?ocid=binghp01"
+                                data-t='{"n":"動画","a":"click","b":1,"d":"https://www.msn.com/ja-jp/channel/topic/ニュース映像/tp-Y_353895c2-aee6-468b-9827-adb65dde3989?ocid=binghp01","f.i":"news-video","f.n":"動画","f.t":"category filter","c.hl":"動画"}'>
+                                動画
+                            </msn-nav-item>
+                        </li>
+                    </ul>
+
+                    <fluent-button appearance="stealth" class="settings-link stealth" aria-label="パーソナライズ設定"
+                        title="パーソナライズ設定"
+                        data-t="{&quot;n&quot;:&quot;Personalize&quot;,&quot;t&quot;:11,&quot;a&quot;:&quot;click&quot;,&quot;b&quot;:1,&quot;c.t&quot;:12}"
+                        current-value="">
+                        <span slot="start" class="edit-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.9 2.9a1 1 0 00-1.8 0L7.17 6.8l-4.31.63a1 1 0 00-.56 1.7l3.13 3.05-.74 4.3a1 1 0 001.45 1.05l3.43-1.8c.16-.4.4-.76.7-1.07l.1-.09a1 1 0 00-.83.05l-3.87 2.03.74-4.3a1 1 0 00-.29-.89L3 8.43l4.32-.63a1 1 0 00.75-.55L10 3.35l1.93 3.9c.15.3.43.5.75.55l4.32.63-.72.7c.48-.15 1-.17 1.49-.06a1 1 0 00-.63-1.63l-4.31-.63L10.9 2.9zm4.9 7.65l-4.82 4.83a2.2 2.2 0 00-.58 1.02l-.37 1.5a.89.89 0 001.08 1.07l1.5-.37c.38-.1.73-.3 1.01-.58l4.83-4.83a1.87 1.87 0 00-2.64-2.64z">
+                                </path>
+                            </svg>
+                        </span>
+                        パーソナライズ設定
+
+                    </fluent-button>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- <div class="consumption-page-banner-wrapper hidden" id="scrollHidden">
+        <iframe id="utif_banner1_b8501c97fe2247c2cafc93adb93db5a0_e7a9d907-6c64-4b3e-8959-2ca2611249c1"
+            name="utif_banner1_b8501c97fe2247c2cafc93adb93db5a0_e7a9d907-6c64-4b3e-8959-2ca2611249c1" height="90px"
+            width="728px" tabindex="-1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+            style="border: 0px;"></iframe>
+    </div> -->
+
+    <div class="container-custom" style="margin-top: 152px;">
+        <div class="row m-0">
+            <div class="col-sm-2 col-2 hidden">
+                <div>
+                    <ul class="separate-buttons">
+                        <li class="at-item">
+                            <img src="./assets/images/headphones_sound_wave_24_filled.svg" alt="">
+                        </li>
+                        <li class="at-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.48 1.7c-.8-.83-2.09-.38-2.43.6-.28.8-.64 1.77-1 2.48C8 6.9 7.38 8.1 5.67 9.63c-.23.2-.52.36-.84.49-1.13.44-2.2 1.61-1.91 3l.35 1.77a2.5 2.5 0 001.8 1.92l5.6 1.52a4.5 4.5 0 005.6-3.53l.69-3.76A3 3 0 0014 7.5h-.89l.01-.05c.08-.41.18-.97.24-1.59.07-.6.1-1.28.05-1.9a3.68 3.68 0 00-.5-1.74 4.16 4.16 0 00-.44-.52z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="at-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.48 18.3c-.8.83-2.09.38-2.43-.6-.28-.8-.64-1.77-1-2.48C8 13.1 7.38 11.9 5.67 10.37c-.23-.2-.52-.36-.84-.49-1.13-.44-2.2-1.61-1.91-3l.35-1.77a2.5 2.5 0 011.8-1.92l5.6-1.53a4.5 4.5 0 015.6 3.54l.69 3.76A3 3 0 0114 12.5h-.89l.01.05c.08.41.18.97.24 1.58.07.62.1 1.29.05 1.92a3.68 3.68 0 01-.5 1.73c-.11.16-.27.35-.44.52z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="at-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.8 17.8a1 1 0 01-1.4-.2.98.98 0 01-.2-.59v-2.17h-.6A2.58 2.58 0 012 12.28V5.57A2.58 2.58 0 014.6 3h10.8C16.84 3 18 4.15 18 5.57v6.7a2.58 2.58 0 01-2.6 2.57h-4.59L6.8 17.8zm-.6-.8z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="at-item">
+                            <img src="./assets/images/share_20_filled.svg" alt="">
+                        </li>
+                        <li class="at-item">
+                            <img src="./assets/images/More.svg" alt="" style="transform: rotate(90deg);">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12 borderRright">
+                <div>
+                    <div class="newProviderBannerContainer newProviderBannerBgLight">
+                        <div class="d-flex flex-wrap gap-2 between align-items-center">
+                            <div class="d-flex">
+                                <img src="./assets/images/AAMccaL.png" alt="">
+                                <p class="providerNameSm">
+                                    テレ朝news
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-between gap-5">
+                                <button class="black hidden">
+                                    + フォローする
+                                </button>
+                                <div class="d-flex align-items-center">
+                                    <div class="follow-text hidden">137.8K&nbsp;<span class="follower-text">フォロワー</span>
+                                    </div>
+                                    <div class="divider hidden"></div>
+                                    <button class="share">
+                                        <svg width="16" height="16" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.49 1.61a.62.62 0 1 1 0-1.25h6.25a.62.62 0 0 1 .62.64v6.24a.62.62 0 1 1-1.25 0V2.5L7.68 8.93a.62.62 0 1 1-.89-.89l6.44-6.43H8.49Z">
+                                            </path>
+                                            <path
+                                                d="M.36 5.36a3.75 3.75 0 0 1 3.75-3.75h2.5a.62.62 0 0 1 0 1.25h-2.5a2.5 2.5 0 0 0-2.5 2.5v6.25a2.5 2.5 0 0 0 2.5 2.5h6.25a2.5 2.5 0 0 0 2.5-2.5V9.74a.63.63 0 0 1 1.25 0v1.87a3.75 3.75 0 0 1-3.75 3.75H4.11a3.75 3.75 0 0 1-3.75-3.75V5.36Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewsInfo gradientBackground">
+                        <div class="viewsHeader" data-test-id="views-title">
+                            <h1 class="viewsHeaderText" style="">6月給与に反映しないと…林長官「労働基準法に違反し得る」迫る『定額減税』罰則も</h1>
+                        </div>
+                        <div data-test-id="views-title-content ClockLight" class="content">
+                            <span class="viewsAttribution viewsAttributionNewRR d-fl" style="">
+                                <span class="viewsAuthors" title="テレ朝news"> <!----> テレ朝news によるストーリー </span></span> •
+                            • <!----><span class="readTimeInfo">読み終わるまで
+                                4 分</span>
+                        </div>
+                    </div>
+                    <div class=" pt-3">
+                        <img src="./assets/images/BB1ngQdf.jpeg" style="width: 100%; height: auto;" alt="">
+                    </div>
+                    <div
+                        class="image-caption-container image-caption-container-ux-impr articlewc-image-caption-container ">
+                        <!----><span class="image-caption"><!---->6月給与に反映しないと…林長官「労働基準法に違反し得る」迫る『定額減税』罰則も</span>
+                        <!----><span class="image-attribution image-attribution-ux-impr">© テレビ朝日</span>
+                    </div>
+                    <div class="my-3 article-body">
+                        <p>
+                            岸田総理肝いりで、来月から実施される『定額減税』をめぐり、林官房長官が29日「6月の給与から減税ができない場合は、労働基準法に違反する可能性がある」と発言しました。企業からは“事務作業が間に合わない”との悲鳴が上がっています。
+                        </p>
+                    </div>
+                    <h2 class="article-sub-heading">■政府「労働基準法に違反も」</h2>
+                    <div class="btnn  d-flex justify-content-center">
+                        <button>
+                            <img src="./assets/images/textExpand_filled.svg" alt="">
+                            続きを読む
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 topMa">
+                <div class="d-flex flex-column gap-3">
+                    <div class="fluent-card">
+                        <div class="titlee">
+                            <img src="./assets/images/AAMccaL.jpeg" height="20" width="20" alt="">
+                            <span class="title-span">
+                                パブリッシャーのサイトに移動します
+                            </span>
+                            <span class="go-partner-site-svg"></span>
+
+                        </div>
+                        <div class="items-container">
+                            <a href="">
+                                大阪・関西万博 ブラジルパビリオン コンセプトデザインを発表
+                            </a>
+                            <a href="">
+                                ロシア 核ドクトリン変更の可能性 外務次官が言及
+                            </a>
+                            <a href="">
+                                ロシア 核ドクトリン変更の可能性 外務次官が言及
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollHide = document.getElementById('scrollHide');
+            var scrollHidden = document.getElementById('scrollHidden');
+
+            if (window.scrollY > 100) { // Change 100 to the desired scroll threshold
+                scrollHide.style.display = 'none';
+                scrollHidden.classList.remove('hidden');
+            } else {
+                scrollHide.style.display = 'block';
+                scrollHidden.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
